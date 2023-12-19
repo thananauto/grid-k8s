@@ -33,4 +33,4 @@ spec:
     matchLabels:
       name: chrome-pod
       app: grid
-  replicas: 2
+  replicas: 1
