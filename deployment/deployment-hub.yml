@@ -10,6 +10,7 @@ spec:
   selector:
     matchLabels:
       name: hub-pod
+      namespace: test-grid
       app: grid
   template:
     metadata:
