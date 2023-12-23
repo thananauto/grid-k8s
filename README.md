@@ -9,3 +9,8 @@ Before start using scalable by KEDA install by `kubectl` command
 kubectl apply --server-side -f https://github.com/kedacore/keda/releases/download/v2.12.1/keda-2.12.1.yaml
 # Without admission webhooks
 kubectl apply --server-side -f https://github.com/kedacore/keda/releases/download/v2.12.1/keda-2.12.1-core.yaml```
+
+
+Switch to namespace
+
+```$ kubectl config set-context --current --namespace=<namespace-name>```
