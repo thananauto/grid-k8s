@@ -7,6 +7,8 @@ metadata:
     app: grid
     name: ui-jobs
 spec:
+  ttlSecondsAfterFinished: 100
+  backoffLimit: 0
   template:
     metadata:
       name: ui-test-job
@@ -14,6 +16,7 @@ spec:
       containers:
         - name: sample-ui-test
           image: thanandock/sample-ui-test:latest
+
           volumeMounts:
           - name: storage
             mountPath: /app/target
@@ -21,5 +24,5 @@ spec:
         - name: storage
           hostPath:
             path: ./output
-            type: Directory
+            type: DirectoryOrCreate
       restartPolicy: Never
