@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: edge-deployment
-  namespace: test-grid
+  namespace: keda
   labels:
     name: edge-deploy
     app: grid

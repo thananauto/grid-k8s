@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: chrome-deployment
-  namespace: test-grid
+  namespace: keda
   labels:
     name: chrome-deploy
     app: grid

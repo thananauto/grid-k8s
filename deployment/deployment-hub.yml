@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hub-deployment
+  namespace: keda
   labels:
     name: hub-deploy
     app: grid
@@ -10,7 +11,7 @@ spec:
   selector:
     matchLabels:
       name: hub-pod
-      namespace: test-grid
+      
       app: grid
   template:
     metadata:

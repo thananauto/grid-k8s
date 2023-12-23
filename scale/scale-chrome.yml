@@ -2,11 +2,11 @@ apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
 metadata:
   name: chrome-scale-deployment
-  namespace: test-grid
+  namespace: Keda
   labels:
     deploymentName: chrome-deployment
 spec:
-  minReplicaCount: 0
+  minReplicaCount: 1
   maxReplicaCount: 8
   scaleTargetRef:
     name: chrome-deployment

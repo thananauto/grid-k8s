@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: firefox-deployment
-  namespace: test-grid
+  namespace: keda
   labels:
     name: firefox-deploy
     app: grid
