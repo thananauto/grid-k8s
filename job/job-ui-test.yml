@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  namespace: keda
+  name: ui-test-job
+  labels:
+    app: grid
+    name: ui-jobs
+spec:
+  template:
+    metadata:
+      name: ui-test-job
+    spec:
+      containers:
+        - name: sample-ui-test
+          image: thanandock/sample-ui-test:latest
+          volumeMounts:
+          - name: storage
+            mountPath: /app/target
+      volumes:
+        - name: storage
+          hostPath:
+            path: ./output
+            type: Directory
+      restartPolicy: Never
